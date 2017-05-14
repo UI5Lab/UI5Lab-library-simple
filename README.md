@@ -7,25 +7,25 @@ Feel free to adopt!
 
 ## Getting started
 
-* Install node.js (get it from [nodejs.org](http://nodejs.org/)).
+1. Install node.js (get it from [nodejs.org](http://nodejs.org/)).
  * If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
 
-* Clone the repository and navigate into it
+2. Clone the repository and navigate into it
 ```sh
 git clone https://github.com/openui5/UI5Lab-library-simple
 cd UI5Lab-library-simple
 ```
-* Install all npm dependencies (also installs all bower dependencies)
+3. Install all npm dependencies (also installs all bower dependencies)
 ```sh
 npm install
 ```
 
-* Run npm start to lint, build and run a local server (have a look into `Gruntfile.js` to see all the tasks).
+4. Run npm start to lint, build and run a local server (have a look into `Gruntfile.js` to see all the tasks).
 ```sh
 npm start
 ```
 
-* Open a test page in your browser: [http://localhost:8080/test-resources/ui5lab/geometry/Square.html](http://localhost:8080/test-resources/ui5lab/geometry/Square.html)
+5. Open a test page in your browser: [http://localhost:8080/test-resources/ui5lab/geometry/Square.html](http://localhost:8080/test-resources/ui5lab/geometry/Square.html)
 
 ### Directions
 
