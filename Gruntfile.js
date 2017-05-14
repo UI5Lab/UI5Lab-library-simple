@@ -26,12 +26,14 @@ module.exports = function(grunt) {
 					resources: [
 						'<%= dir.bower_components %>/openui5-sap.ui.core/resources',
 						'<%= dir.bower_components %>/openui5-sap.m/resources',
+						'<%= dir.bower_components %>/openui5-sap.f/resources',
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/resources',
 						'<%= dir.src %>'
 					],
 					testresources: [
 						'<%= dir.bower_components %>/openui5-sap.ui.core/test-resources',
 						'<%= dir.bower_components %>/openui5-sap.m/test-resources',
+						'<%= dir.bower_components %>/openui5-sap.f/test-resources',
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
 						'<%= dir.test %>'
 					]
@@ -42,12 +44,14 @@ module.exports = function(grunt) {
 					resources: [
 						'<%= dir.bower_components %>/openui5-sap.ui.core/resources',
 						'<%= dir.bower_components %>/openui5-sap.m/resources',
+						'<%= dir.bower_components %>/openui5-sap.f/resources',
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/resources',
 						'<%= dir.dist %>/resources'
 					],
 					testresources: [
 						'<%= dir.bower_components %>/openui5-sap.ui.core/test-resources',
 						'<%= dir.bower_components %>/openui5-sap.m/test-resources',
+						'<%= dir.bower_components %>/openui5-sap.f/test-resources',
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
 						'<%= dir.dist %>/test-resources'
 					]

@@ -4,20 +4,20 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 	<meta charset="UTF-8">
 
-	<title>Testpage - ui5lab.geometry.Square</title>
+	<title>Sample - ui5lab.geometry.SquareInteraction</title>
 
-	<base href="../../../">
+	<base href="../../../../">
 	<!--[if lte IE 9]><script>
 	(function() {
 		var baseTag = document.getElementsByTagName('base')[0];
 		baseTag.href = baseTag.href;
 	})();
-	</script><![endif]-->
+</script><![endif]-->
 
 	<script id="sap-ui-bootstrap"
-		src="resources/sap-ui-core.js"
-		data-sap-ui-libs="ui5lab.geometry"
-		data-sap-ui-theme="sap_belize">
+			src="resources/sap-ui-core.js"
+			data-sap-ui-libs="sap.m,ui5lab.geometry"
+			data-sap-ui-theme="sap_belize">
 	</script>
 
 
@@ -30,12 +30,21 @@
 			});
 			sap.ui.getCore().setModel(oModel);
 
+			// create slider
+			var oSlider = new sap.m.Slider({
+				value: "{/size}",
+				min: 100,
+				max: 500
+			});
+
 			// create control
 			var oSquare = new ui5lab.geometry.Square({
 				size: "{/size}",
 				text: "{/text}",
 				shape: "RoundCorners"
 			});
+
+			oSlider.placeAt("content");
 			oSquare.placeAt("content");
 		});
 	</script>
