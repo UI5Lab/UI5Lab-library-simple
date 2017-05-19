@@ -1,0 +1,30 @@
+{
+	"ui5lab.geometry": {
+		"description": "An example library containing geometrical controls",
+		"source" : "https://github.com/openui5/UI5Lab-library-simple",
+		"documentation": "https://github.com/openui5/UI5Lab-library-simple/README.md",
+		"demo": "https://htmlpreview.github.io/?https://github.com/openui5/UI5Lab-app-simple/blob/master/webapp/index.html",
+		"version": 1.0,
+		"content": {
+			"Square": {
+				"id": "Square",
+				"name": "Square",
+				"type": "control",
+				"version": 1.0,
+				"description": "Squares are awesome geometrical shapes that are underepresented in today's modern UIs",
+				"samples": [
+					{
+						"id": "SquareSimple",
+						"name": "Simple Square",
+						"description": "Minimalistic example of a Square control"
+					},
+					{
+						"id": "SquareInteraction",
+						"name": "Square with user interaction",
+						"description": "Square control connected to a Slider to illustrate user interaction"
+					}
+				]
+			}
+		}
+	}
+}

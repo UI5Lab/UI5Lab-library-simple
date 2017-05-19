@@ -25,7 +25,7 @@ sap.ui.define([
 			// set up the JSON model data in a timeout to not block the UI while loading the app
 			setTimeout(function () {
 				this._iStartTime = new Date().getTime();
-				this._loadSamples();
+				this._loadLibraries();
 			}.bind(this), 0);
 
 			return this;
@@ -50,24 +50,52 @@ sap.ui.define([
 		/* =========================================================== */
 
 		/**
-		 * Load and process all samples from the metadata
+		 * Load and process all libraries available in the current project
 		 * @private
 		 */
-		_loadSamples: function () {
+		_loadLibraries: function () {
 			var oMetadataLoaded = new Promise(function(fnResolve, fnReject) {
-					// load metadata asynchronously
-					jQuery.ajax(jQuery.sap.getModulePath("ui5lab.browser", "/index.json"), {
-						dataType: "json",
-						success: function (oData) {
-							this._oMetadata = oData;
-							fnResolve();
-						}.bind(this),
-						error: fnReject
-					});
-				}.bind(this));
+				// TODO:
+				// * this needs to be replaced by a dynamic discovery servlet
+				// * nobody wants to configure redundant metadata
+
+				// load library metadata file asynchronously
+				jQuery.ajax(jQuery.sap.getModulePath("libs", "/libraries.json"), {
+					dataType: "json",
+					success: function (oData) {
+						var aLibraries = oData.libraries;
+						this._oMetadata = {};
+						this._iLibraryCount = aLibraries.length;
+						this._iLibraryLoadedCount = 0;
+
+						for (var i = 0; i < aLibraries.length; i++) {
+							this._loadSamples(aLibraries[i], fnResolve, fnReject);
+						}
+					}.bind(this),
+					error: fnReject
+				});
+			}.bind(this));
 
 			// process data once both models are loaded
 			oMetadataLoaded.then(this._onMetadataLoaded.bind(this), this._onError.bind(this));
+		},
+
+		/**
+		 * Load and process all samples from the metadata
+		 * @private
+		 */
+		_loadSamples: function (sLibraryName, fnResolve, fnReject) {
+			jQuery.ajax(jQuery.sap.getModulePath("libs." + sLibraryName, "/index.json"), {
+				dataType: "json",
+				success: function (oData) {
+					this._oMetadata[sLibraryName] = oData[sLibraryName];
+					this._iLibraryLoadedCount++;
+					if (this._iLibraryCount === this._iLibraryLoadedCount) {
+						fnResolve();
+					}
+				}.bind(this),
+				error: fnReject
+			});
 		},
 
 		/**
@@ -100,16 +128,17 @@ sap.ui.define([
 				assets: [],
 				samples: []
 			};
-			oModelData.libraries = Object.keys(oMetadata);
+			aLibraryNames = oMetadata;
 
-			for (var i = 0; i < oModelData.libraries.length; i++) {
-				var aEntities = Object.keys(oMetadata[oModelData.libraries[i]]);
+			var aLibraryNames = Object.keys(aLibraryNames);
+			for (var i = 0; i < aLibraryNames.length; i++) {
+				var aEntities = Object.keys(oMetadata[aLibraryNames[i]].content);
 				for (var j = 0; j < aEntities.length; j++) {
-					var oAsset = oMetadata[oModelData.libraries[i]][aEntities[j]];
+					var oAsset = oMetadata[aLibraryNames[i]].content[aEntities[j]];
 
 					// create global id and store asset
-					oAsset.id = oModelData.libraries[i] + "." + oAsset.id;
-					oAsset.library = oModelData.libraries[i];
+					oAsset.id = aLibraryNames[i] + "." + oAsset.id;
+					oAsset.library = aLibraryNames[i];
 					oModelData.assets.push(oAsset);
 
 					// list samples separately
@@ -119,7 +148,7 @@ sap.ui.define([
 						// create global id and store asset
 						oSample.id = oAsset.id + "." + oSample.id;
 						oSample.asset = oAsset.id;
-						oSample.library = oModelData.libraries[i];
+						oSample.library = aLibraryNames[i];
 						oModelData.samples.push(oSample);
 					}
 				}
