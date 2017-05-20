@@ -1,5 +1,7 @@
 {
 	"ui5lab.geometry": {
+		"icon": "sap-icon://database",
+		"name": "Geometry",
 		"description": "An example library containing geometrical controls",
 		"source" : "https://github.com/openui5/UI5Lab-library-simple",
 		"documentation": "https://github.com/openui5/UI5Lab-library-simple/README.md",
