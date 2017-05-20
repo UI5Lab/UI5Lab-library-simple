@@ -11,7 +11,7 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/library'],
 
 
 	/**
-	 * UI5 library: ui5lab.geometry.
+	 * An example library containing geometrical controls
 	 *
 	 * @namespace
 	 * @name ui5lab.geometry
