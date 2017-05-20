@@ -1,24 +1,16 @@
-UI5Lab-library-simple extended with a multi-library sample browser
+# UI5Lab-library-simple
 
-> The repository is a fork of [UI5Lab-library-simple](https://github.com/openui5/UI5Lab-library-simple) with additional metadata and a browser for samples that reads the metadata to display samples from one or more libraries
+A simple control library that holds custom geometrical controls for testing the UI5Lab library structure.
+The [UI5Lab-browser](https://github.com/openui5/UI5Lab-browser) is loaded as a dependency to display the library content for testing during development.
 
-## Rough idea
+Feel free to adopt!
 
-The browser app that is still located inside the library project under test/ui5lab/browser should be 
-* a helper tool to develop samples and high-level documentation for listing your project in the UI5Lab
-* It lists all libraries and samples currently available in your local workspace of one or more libraries
-* During development you can test how your samples and artifacts will look like when publishing them to UI5lab
-* On the gitlab gh-pages branch this app can be used to showcase and retrieve all kinds of artifacts listed in UI5Lab
-* As such, it is a dependency for both design time and run-time of UI5Lab development
+> The repository is an example how to create custom [OpenUI5](https://github.com/SAP/openui5) control library using Grunt & Bower based on the library [documentation](https://github.com/SAP/openui5/blob/master/docs/controllibraries.md) in the OpenUI5 repository. 
 
-## TODOs and ideas
-* Replace global libraries.json with a simple (nodejs) discovery service that finds all libraries and samples currently available and returns a json with all relevant information in json format
-** Alternative: put static json data at root level or read it from pagacke and bower.json and wait for UI5 tooling to do this for us
-* put the browser in a separate project with a dependency on sap.m and sap.f and load it as a dependency in a library project
-* browser needs sap.f but library does not, how to deal with nested dependencies? need to reserach on npm and try it out
-* library project should simply consume the browser dependency to show all samples currently available in the workspace
-
-*If you like to help us get this working, see the contribution options below*
+## TODO
+* register the built library package so that it can be consumed somewhere else
+* load browser as a built package and to the dependency tree work (is currently loaded from github directly as a proof of concept)
+* remove explicit bower dependency to sap.f (is only needed by browser, not by library project itself)
 
 ## Getting started
 
@@ -55,3 +47,7 @@ npm start
 ### Contributing
 
 Instructions how to connect to the community and contribute to the UI5lab project can be found in the [main repository](https://github.com/openui5/UI5Lab/)!
+
+### Credits
+
+Thank you to @matz3 for your input and support!
