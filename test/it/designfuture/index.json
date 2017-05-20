@@ -16,7 +16,8 @@
 					{
 						"id": "QRCode",
 						"name": "QR Code Generator",
-						"description": "An app that can generate QR codes on the fly"
+						"description": "An app that can generate QR codes on the fly",
+						"url": "https://stermi.github.io/openui5-qrcode/demo/"
 					}
 				]
 			}
