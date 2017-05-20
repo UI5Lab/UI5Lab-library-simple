@@ -16,9 +16,10 @@
 			 */
 			function suite() {
 				var suite = new parent.jsUnitTestSuite(),
-				    contextPath = "/" + window.location.pathname.split("/")[1];
+					contextPath = "/" + window.location.pathname.split("/")[1];
 
 				suite.addTestPage(contextPath + "/test-resources/ui5lab/geometry/qunit/Square.qunit.html");
+				suite.addTestPage(contextPath + "/test-resources/ui5lab/geometry/qunit/Circle.qunit.html");
 
 				return suite;
 			}

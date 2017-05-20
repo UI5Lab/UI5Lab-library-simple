@@ -26,6 +26,20 @@
 						"description": "Square control connected to a Slider to illustrate user interaction"
 					}
 				]
+			},
+			"Circle": {
+				"id": "Circle",
+				"name": "Circle",
+				"type": "control",
+				"version": 1.0,
+				"description": "Circles are squares with infinite angles so we extend a square and make it round",
+				"samples": [
+					{
+						"id": "Circle",
+						"name": "Extended Circle",
+						"description": "Circles are squares with infinite angles so we extend a square and make it round"
+					}
+				]
 			}
 		}
 	}

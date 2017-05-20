@@ -31,7 +31,7 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Control'],
 				/**
 				 * Sets the size (width/height) for the square
 				 */
-				size: {type: "int", defaultValue: "50"},
+				size: {type: "int", defaultValue: 50},
 				/**
 				 * Sets the text inside the square
 				 */

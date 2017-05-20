@@ -29,7 +29,8 @@ sap.ui.define(['jquery.sap.global', 'sap/ui/core/library'],
 		],
 		interfaces: [],
 		controls: [
-			"ui5lab.geometry.Square"
+			"ui5lab.geometry.Square",
+			"ui5lab.geometry.Circle"
 		],
 		elements: [],
 		noLibraryCSS: false,
