@@ -1,6 +1,5 @@
 {
 	"libraries": [
-		"it.designfuture",
 		"ui5lab.geometry"
 	]
 }
