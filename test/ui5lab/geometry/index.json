@@ -13,7 +13,7 @@
 				"name": "Square",
 				"type": "control",
 				"version": 1.0,
-				"description": "Squares are awesome geometrical shapes that are under-represented in today's modern UIs",
+				"description": "An awesome geometrical shape that is under-represented in today's modern UIs",
 				"samples": [
 					{
 						"id": "SquareSimple",
@@ -32,7 +32,7 @@
 				"name": "Circle",
 				"type": "control",
 				"version": 1.0,
-				"description": "Circles are squares with infinite angles so we extend a square and make it round",
+				"description": "A circle is a square with infinite angles so we extend it and make it round",
 				"samples": [
 					{
 						"id": "Circle",
@@ -46,7 +46,7 @@
 				"name": "Equal-sided Triangle",
 				"type": "control",
 				"version": 1.0,
-				"description": "Triangles are lacking one angle to make them a square, and that makes them special",
+				"description": "Lacks one angle to make it a square, and that makes it special",
 				"samples": [
 					{
 						"id": "Triangle",
