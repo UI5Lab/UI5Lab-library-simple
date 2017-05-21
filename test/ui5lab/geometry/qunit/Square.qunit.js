@@ -8,5 +8,5 @@ sap.ui.require([
 		assert.strictEqual(oSquare.getSize(), 50);
 		assert.strictEqual(oSquare.getText(), "");
 		assert.strictEqual(oSquare.getShape(), "AngledCorners");
-	})
+	});
 });

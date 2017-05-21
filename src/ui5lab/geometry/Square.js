@@ -14,7 +14,7 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Control'],
 	 * @param {object} [mSettings] initial settings for the new control
 	 *
 	 * @class
-	 * Squares are awesome geometrical shapes that are underepresented in today's modern UIs
+	 * Squares are awesome geometrical shapes that are under-represented in today's modern UIs
 	 * @extends sap.ui.core.Control
 	 *
 	 * @public

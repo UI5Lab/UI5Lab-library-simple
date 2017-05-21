@@ -7,5 +7,5 @@ sap.ui.require([
 		var oCircle = new Circle();
 		assert.strictEqual(oCircle.getSize(), 300);
 		assert.strictEqual(oCircle.getText(), "Circle");
-	})
+	});
 });

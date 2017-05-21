@@ -19,8 +19,6 @@ sap.ui.define([],
 	 * @param {sap.ui.core.Control} oControl An object representation of the control that will be rendered
 	 */
 	CircleRenderer.render = function(oRm, oControl) {
-		var sShape = oControl.getShape();
-
 		oRm.write("<div");
 		oRm.writeControlData(oControl);
 		oRm.addClass("ui5labSquare");
