@@ -106,7 +106,7 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Control'],
 		 */
 		onmousedown: function(oEvent) {
 			// set a modified based on the mouse key
-			switch(oEvent.which) {
+			switch (oEvent.which) {
 				case 2: this._bRotationModifier = 2; break; // full speed
 				case 3: this._bRotationModifier = -1; break; // reverse
 				case 1:
