@@ -4,6 +4,8 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 
+		libraryName: 'ui5lab.geometry',
+
 		dir: {
 			src: 'src',
 			test: 'test',
@@ -70,8 +72,31 @@ module.exports = function(grunt) {
 			}
 		},
 
+		openui5_theme: {
+			theme: {
+				files: [
+					{
+						expand: true,
+						cwd: '<%= dir.src %>',
+						src: '**/themes/*/library.source.less',
+						dest: '<%= dir.dist %>/resources'
+					}
+				],
+				options: {
+					rootPaths: [
+						'<%= dir.bower_components %>/openui5-sap.ui.core/resources',
+						'<%= dir.bower_components %>/openui5-themelib_sap_belize/resources',
+						'<%= dir.src %>'
+					],
+					library: {
+						name: '<%= libraryName %>'
+					}
+				}
+			}
+		},
+
 		openui5_preload: {
-			component: {
+			library: {
 				options: {
 					resources: '<%= dir.src %>',
 					dest: '<%= dir.dist %>/resources'
@@ -128,7 +153,7 @@ module.exports = function(grunt) {
 	grunt.registerTask('lint', ['eslint']);
 
 	// Build task
-	grunt.registerTask('build', ['openui5_preload', 'copy']);
+	grunt.registerTask('build', ['openui5_theme', 'openui5_preload', 'copy']);
 
 	// Default task
 	grunt.registerTask('default', [
