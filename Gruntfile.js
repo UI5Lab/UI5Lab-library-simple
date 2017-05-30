@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
 						'<%= dir.test %>',
 						// TODO: just a first test, use built package instead
-						'<%= dir.ui5lab_browser %>/test'
+						'<%= dir.ui5lab_browser %>/dist/test-resources'
 					]
 				}
 			},
