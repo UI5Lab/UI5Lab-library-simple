@@ -2,7 +2,7 @@
   "name": "ui5lab-library-simple",
   "version": "0.1.0",
   "description": "Sample of a custom UI5 library for the UI5Lab project",
-  "private": true,
+  "private": false,
   "scripts": {
     "test": "echo \"Error: no test specified. Please add some.\" && exit 1",
     "postinstall": "bower install",

@@ -34,6 +34,22 @@ npm start
 
 5. Open a test page in your browser: [http://localhost:8080/test-resources/ui5lab/geometry/Square.html](http://localhost:8080/test-resources/ui5lab/geometry/Square.html)
 
+## Publishing a library project
+
+1. Maintain the index.json file in the test folder to contain all artifacts and samples. You can test how your library would appear in the browser locally by adding a reference to the libraries.json file
+
+>Note: this metadata is still work in progress and subject to change. We will have to see what the best place and structure for this is in the future
+ 
+2. Run grunt build to create a library preload and the CSS theme build for your library artifacts. Everything (minified and unminified sources) will be created in the dist folder, ready to be published and consumed by other projects
+```sh
+grunt build
+```
+
+3. Publish your package to npm, be sure to include only the metadata and the dist folder to keep the package size small (see .npmignore file for details) 
+```sh
+npm publish
+```
+
 ### Directions
 
 [Browser](http://localhost:8080/test-resources/ui5lab/browser/index.html) A sample browser showcasing artifacts from one or more libraries
