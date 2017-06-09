@@ -27,8 +27,8 @@ sap.ui.define(['jquery.sap.global', './library', 'ui5lab/geometry/Square'],
 		 */
 		metadata: {
 			library : "ui5lab.geometry"
-		}
-		// no surprises here, just the base parameters from the Square
+			// no surprises here, just the base parameters from the Square
+		},
 
 		/**
 		 * Lifecycle hook to initialize the control
