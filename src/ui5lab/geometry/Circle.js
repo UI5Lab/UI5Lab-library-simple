@@ -22,11 +22,12 @@ sap.ui.define(['jquery.sap.global', './library', 'ui5lab/geometry/Square'],
 	 * @alias ui5lab.geometry.Circle
 	 */
 	var oCircle = Control.extend("ui5lab.geometry.Circle", /** @lends ui5lab.geometry.Circle.prototype */ {
-		library : "ui5lab.geometry",
-
 		/**
 		 * Control API
 		 */
+		metadata: {
+			library : "ui5lab.geometry"
+		}
 		// no surprises here, just the base parameters from the Square
 
 		/**

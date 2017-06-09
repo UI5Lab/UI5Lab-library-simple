@@ -21,12 +21,11 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Control'],
 	 * @alias ui5lab.geometry.Square
 	 */
 	var oSquare = Control.extend("ui5lab.geometry.Square", /** @lends ui5lab.geometry.Square.prototype */ {
-		library : "ui5lab.geometry",
-
 		/**
 		 * Control API
 		 */
 		metadata: {
+			library : "ui5lab.geometry",
 			properties: {
 				/**
 				 * Sets the size (width/height) for the square

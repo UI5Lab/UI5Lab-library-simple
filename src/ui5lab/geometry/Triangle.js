@@ -22,12 +22,11 @@ sap.ui.define(['jquery.sap.global', './library', 'sap/ui/core/Control'],
 	 * @alias ui5lab.geometry.Triangle
 	 */
 	var oTriangle = Control.extend("ui5lab.geometry.Triangle", /** @lends ui5lab.geometry.Triangle.prototype */ {
-		library : "ui5lab.geometry",
-
 		/**
 		 * Control API
 		 */
 		metadata: {
+			library : "ui5lab.geometry",
 			properties: {
 				/**
 				 * Sets the size (width/height) for the Triangle
