@@ -12,7 +12,7 @@ module.exports = function(grunt) {
 			dist: 'dist',
 			bower_components: 'bower_components',
 			// TODO: just a first test, use built package instead
-			ui5lab_browser: 'node_modules/ui5lab-browser'
+			ui5lab_browser: 'node_modules/ui5lab-browser/dist'
 		},
 
 		connect: {
@@ -44,7 +44,7 @@ module.exports = function(grunt) {
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
 						'<%= dir.test %>',
 						// TODO: just a first test, use built package instead
-						'<%= dir.ui5lab_browser %>/dist/test-resources'
+						'<%= dir.ui5lab_browser %>/test-resources'
 					]
 				}
 			},
@@ -66,7 +66,7 @@ module.exports = function(grunt) {
 						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
 						'<%= dir.dist %>/test-resources',
 						// TODO: just a first test, use built package instead
-						'<%= dir.ui5lab_browser %>/test'
+						'<%= dir.ui5lab_browser %>/test-resources'
 					]
 				}
 			}
