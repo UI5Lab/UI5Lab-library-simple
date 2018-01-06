@@ -5,7 +5,6 @@
 		"description": "An example library containing geometrical controls",
 		"source" : "https://github.com/UI5Lab/UI5Lab-library-simple",
 		"documentation": "https://github.com/UI5Lab/UI5Lab-library-simple/blob/master/README.md",
-		"demo": "https://htmlpreview.github.io/?https://github.com/UI5Lab/UI5Lab-app-simple/blob/master/webapp/index.html",
 		"license": "Apache 2.0",
 		"version": 1.0,
 		"content": {
