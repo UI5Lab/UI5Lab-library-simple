@@ -1,6 +1,6 @@
 {
   "name": "ui5lab-library-simple",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Sample of a custom UI5 library for the UI5Lab project",
   "repository" : {
       "type" : "git",
