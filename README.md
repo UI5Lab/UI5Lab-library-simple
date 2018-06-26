@@ -1,18 +1,17 @@
+![UI5Lab Logo](https://github.com/UI5Lab/UI5Lab-central/blob/master/docs/media/UI5LabLogoPhoenix.png)
+
+# What is it
+
+UI5Lab is a community driven repository for UI5 Custom Control Libraries. It's purpose is to make it easy for everyone to share, retrieve and use UI5 Custom Controls. Contributions welcome!
+
 # UI5Lab-library-simple
 
-A simple control library that holds custom geometrical controls for testing the UI5Lab library structure.
-The [UI5Lab-browser](https://github.com/openui5/UI5Lab-browser) is loaded as a dependency to display the library content for testing during development.
-
-Feel free to adopt!
+A simple control library example that holds custom geometrical controls for testing the UI5Lab library structure.
+You may use this repository as a reference to develop or publish your own UI5Lab controls. Have a look at our [documentation](http://ui5lab.io/docs/) for more details. 
 
 > The repository is an example how to create custom [OpenUI5](https://github.com/SAP/openui5) control library using Grunt & Bower based on the library [documentation](https://github.com/SAP/openui5/blob/master/docs/controllibraries.md) in the OpenUI5 repository. 
 
-## TODO
-* register the built library package so that it can be consumed somewhere else
-* load browser as a built package and to the dependency tree work (is currently loaded from github directly as a proof of concept)
-* remove explicit bower dependency to sap.f (is only needed by browser, not by library project itself)
-
-## Getting started
+#### Setup
 
 1. Install node.js (get it from [nodejs.org](http://nodejs.org/)).
  * If working behind a proxy, you need to configure it properly (HTTP_PROXY / HTTPS_PROXY / NO_PROXY environment variables)
@@ -31,8 +30,14 @@ npm install
 ```sh
 npm start
 ```
+5. Choose one of the following entry points to test the library
 
-5. Open a test page in your browser: [http://localhost:8080/test-resources/ui5lab/geometry/Square.html](http://localhost:8080/test-resources/ui5lab/geometry/Square.html)
+* [UI5Lab  browser](http://localhost:8080/test-resources/ui5lab/browser/index.html) Preview of the library in a local instance of the browser
+* [Control Test page](http://localhost:8080/test-resources/ui5lab/geometry/Square.html) Test page for the ui5lab.geometry.Square control
+* [QUnit Tests](http://localhost:8080/test-resources/ui5lab/geometry/qunit/Square.qunit.html) A simple QUnit test
+* [Testuite](http://localhost:8080/test-resources/ui5lab/geometry/qunit/testsuite.qunit.html) A QUnit testsuite running all unit tests in this library
+
+> The [UI5Lab-browser](https://github.com/openui5/UI5Lab-browser) is loaded as a dependency to display the library content for testing during development. Make sure that your library samples and metadata are properly filled before publishing a library to UI5Lab
 
 ## Publishing a library project
 
@@ -49,21 +54,21 @@ grunt build
 ```sh
 npm publish
 ```
+# Directions
 
-### Directions
+* [Homepage](https://ui5lab.io) - the single point of entry for UI5Lab
+* [Documentation](https://ui5lab.io/docs) - project overview and tutorials
+* [Browser](https://ui5lab.io/browser) - all UI5Lab libraries and examples
+* [Demo](https://ui5lab.github.io/UI5Lab-app-simple/index.html) - an example app consuming simple UI5Lab controls
 
-[Browser](http://localhost:8080/test-resources/ui5lab/browser/index.html) A sample browser showcasing artifacts from one or more libraries
+# Troubleshooting
 
-[Control page](http://localhost:8080/test-resources/ui5lab/geometry/Square.html) An HTML test page instantiating the control
+Issues can be created either in this repository or in any of the contributor repositories depending on where the error came from.
+Be sure to include enough details and context to reproduce the issue and follow up with you. 
 
-[Test page](http://localhost:8080/test-resources/ui5lab/geometry/qunit/Square.qunit.html) A simple QUnit test
+# Contact
 
-[Testuite](http://localhost:8080/test-resources/ui5lab/geometry/qunit/testsuite.qunit.html) A QUnit testsuite running all unit tests in this library
+We organize this project in [Slack Channel #UI5Lab](https://openui5.slack.com/messages/UI5lab).
+If you are interested in what we do and discuss, join with this [invitation link](http://slackui5invite.herokuapp.com/) or visit the homepage [https://ui5lab.io](https://ui5lab.io).
 
-### Contributing
-
-Instructions how to connect to the community and contribute to the UI5lab project can be found in the [main repository](https://github.com/openui5/UI5Lab/)!
-
-### Credits
-
-Thank you to @matz3 for your input and support!
+*The UI5Lab Community*
