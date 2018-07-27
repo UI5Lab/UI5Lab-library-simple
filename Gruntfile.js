@@ -10,7 +10,7 @@ module.exports = function(grunt) {
 			src: 'src',
 			test: 'test',
 			dist: 'dist',
-			bower_components: 'bower_components',
+			ui5libs: 'node_modules/@openui5',
 			ui5lab_browser: 'node_modules/ui5lab-browser/dist'
 		},
 
@@ -27,20 +27,20 @@ module.exports = function(grunt) {
 			src: {
 				options: {
 					resources: [
-						'<%= dir.bower_components %>/openui5-sap.ui.core/resources',
-						'<%= dir.bower_components %>/openui5-sap.m/resources',
-						'<%= dir.bower_components %>/openui5-sap.f/resources',
-						'<%= dir.bower_components %>/openui5-sap.ui.layout/resources',
-						'<%= dir.bower_components %>/openui5-themelib_sap_belize/resources',
+						'<%= dir.ui5libs %>/sap.ui.core/src',
+						'<%= dir.ui5libs %>/sap.m/src',
+						'<%= dir.ui5libs %>/sap.f/src',
+						'<%= dir.ui5libs %>/sap.ui.layout/src',
+						'<%= dir.ui5libs %>/themelib_sap_belize/src',
 						'<%= dir.src %>'
 					],
 					testresources: [
-						'<%= dir.bower_components %>/openui5-sap.ui.core/test-resources',
-						'<%= dir.bower_components %>/openui5-sap.m/test-resources',
+						'<%= dir.ui5libs %>/sap.ui.core/test',
+						'<%= dir.ui5libs %>/sap.m/test',
 						// TODO: how to get rid of these indirect dependencies only needed for the browser (f + layout)
-						'<%= dir.bower_components %>/openui5-sap.f/test-resources',
-						'<%= dir.bower_components %>/openui5-sap.ui.layout/test-resources',
-						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
+						'<%= dir.ui5libs %>/sap.f/test',
+						'<%= dir.ui5libs %>/sap.ui.layout/test',
+						'<%= dir.ui5libs %>/themelib_sap_belize/test',
 						'<%= dir.test %>',
 						'<%= dir.ui5lab_browser %>/test-resources'
 					]
@@ -49,19 +49,19 @@ module.exports = function(grunt) {
 			dist: {
 				options: {
 					resources: [
-						'<%= dir.bower_components %>/openui5-sap.ui.core/resources',
-						'<%= dir.bower_components %>/openui5-sap.m/resources',
-						'<%= dir.bower_components %>/openui5-sap.f/resources',
-						'<%= dir.bower_components %>/openui5-sap.ui.layout/resources',
-						'<%= dir.bower_components %>/openui5-themelib_sap_belize/resources',
+						'<%= dir.ui5libs %>/sap.ui.core/src',
+						'<%= dir.ui5libs %>/sap.m/src',
+						'<%= dir.ui5libs %>/sap.f/src',
+						'<%= dir.ui5libs %>/sap.ui.layout/src',
+						'<%= dir.ui5libs %>/themelib_sap_belize/src',
 						'<%= dir.dist %>/resources'
 					],
 					testresources: [
-						'<%= dir.bower_components %>/openui5-sap.ui.core/test-resources',
-						'<%= dir.bower_components %>/openui5-sap.m/test-resources',
-						'<%= dir.bower_components %>/openui5-sap.f/test-resources',
-						'<%= dir.bower_components %>/openui5-sap.ui.layout/test-resources',
-						'<%= dir.bower_components %>/openui5-themelib_sap_belize/test-resources',
+						'<%= dir.ui5libs %>/sap.ui.core/test',
+						'<%= dir.ui5libs %>/sap.m/test',
+						'<%= dir.ui5libs %>/sap.f/test',
+						'<%= dir.ui5libs %>/sap.ui.layout/test',
+						'<%= dir.ui5libs %>/themelib_sap_belize/test',
 						'<%= dir.dist %>/test-resources',
 						'<%= dir.ui5lab_browser %>/test-resources'
 					]
@@ -81,8 +81,8 @@ module.exports = function(grunt) {
 				],
 				options: {
 					rootPaths: [
-						'<%= dir.bower_components %>/openui5-sap.ui.core/resources',
-						'<%= dir.bower_components %>/openui5-themelib_sap_belize/resources',
+						'<%= dir.ui5libs %>/sap.ui.core/src',
+						'<%= dir.ui5libs %>/themelib_sap_belize/src',
 						'<%= dir.src %>'
 					],
 					library: {

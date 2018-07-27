@@ -9,7 +9,7 @@ UI5Lab is a community driven repository for UI5 Custom Control Libraries. It's p
 A simple control library example that holds custom geometrical controls for testing the UI5Lab library structure.
 You may use this repository as a reference to develop or publish your own UI5Lab controls. Have a look at our [documentation](http://ui5lab.io/docs/) for more details. 
 
-> The repository is an example how to create custom [OpenUI5](https://github.com/SAP/openui5) control library using Grunt & Bower based on the library [documentation](https://github.com/SAP/openui5/blob/master/docs/controllibraries.md) in the OpenUI5 repository. 
+> The repository is an example how to create custom [OpenUI5](https://github.com/SAP/openui5) control library using Grunt & npm modules based on the library [documentation](https://github.com/SAP/openui5/blob/master/docs/controllibraries.md) in the OpenUI5 repository. 
 
 #### Setup
 
@@ -21,7 +21,7 @@ You may use this repository as a reference to develop or publish your own UI5Lab
 git clone https://github.com/openui5/UI5Lab-library-simple
 cd UI5Lab-library-simple
 ```
-3. Install all npm dependencies (also installs all bower dependencies)
+3. Install all npm dependencies (also installs all UI5 libraries needed)
 ```sh
 npm install
 ```
