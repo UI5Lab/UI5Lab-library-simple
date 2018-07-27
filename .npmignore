@@ -1,6 +1,8 @@
 # exclude development artifacts
 src
 test
+test/ui5lab/browser
+dist/test-resources/ui5lab/browser
 node_modules
 .idea
 .editorconfig
