@@ -25,6 +25,6 @@
   },
   "devDependencies": {
     "fs-extra": "^3.0.0",
-    "ui5lab-browser": "1.0.0"
+    "ui5lab-browser": "https://github.com/Michadelic/UI5Lab-browser"
   }
 }
