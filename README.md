@@ -33,9 +33,9 @@ npm install
 npm run postinstall
 ```
 
-4. Run a local Web server with the ui5 tools:
+4. Run a local Web server with the ui5 tools for testing the library and its metadata:
 ```sh
-ui5 start
+npm start
 ```
 
 > **Note:** Run ```npm install --global @ui5/cli``` if the ```ui5``` command is not registered (for more information see [ui5 tooling](https://github.com/SAP/ui5-tooling]))
