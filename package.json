@@ -7,7 +7,7 @@
     "url": "https://github.com/UI5Lab/UI5Lab-library-simple.git"
   },
   "homepage": "https://ui5lab.github.io/UI5Lab-app-simple/index.html",
-  "ui5lab" : {
+  "ui5lab": {
     "namespace": "ui5lab.geometry",
     "icon": "database",
     "displayName": "Geometry"
@@ -22,14 +22,16 @@
     "build": "npm run index && ui5 build"
   },
   "dependencies": {
-    "@openui5/sap.f": "^1.56.4",
-    "@openui5/sap.m": "^1.56.4",
-    "@openui5/sap.ui.core": "^1.56.4",
-    "@openui5/sap.ui.layout": "^1.56.4",
-    "@openui5/themelib_sap_belize": "^1.56.4"
+    "@openui5/sap.f": "^1.58.4",
+    "@openui5/sap.m": "^1.58.4",
+    "@openui5/sap.ui.core": "^1.58.4",
+    "@openui5/sap.ui.layout": "^1.58.4",
+    "@openui5/themelib_sap_belize": "^1.58.4"
   },
   "devDependencies": {
+    "eslint": "~5.2.0",
     "fs-extra": "^3.0.0",
-    "ui5lab-browser": "https://github.com/Michadelic/UI5Lab-browser"
+    "@ui5/cli": "^0.2.0",
+    "ui5lab-browser": "file:C:\\workspace\\progress_versions\\UI5Lab-browser\\"
   }
 }

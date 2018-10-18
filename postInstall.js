@@ -1,6 +1,6 @@
 var fs = require('fs-extra');
 
-fs.copySync('./node_modules/ui5lab-browser/dist//', './test/ui5lab/browser');
+fs.copySync('./node_modules/ui5lab-browser/dist/', './test/ui5lab/browser');
 
 // read library namespace from package.json
 var oPackage = require('./package.json');
