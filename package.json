@@ -17,9 +17,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified. Please add some.\" && exit 1",
     "postinstall": "node postInstall.js",
-    "index": "node fillIndex.js",
-    "start": "npm run index && ui5 serve",
-    "build": "npm run index && ui5 build"
+    "start": "ui5 serve --open ./test-resources/ui5lab/browser/index.html",
+    "build": "ui5 build"
   },
   "dependencies": {
     "@openui5/sap.f": "^1.58.4",
@@ -31,7 +30,7 @@
   "devDependencies": {
     "eslint": "~5.2.0",
     "fs-extra": "^3.0.0",
-    "@ui5/cli": "^0.2.0",
-    "ui5lab-browser": "file:C:\\workspace\\progress_versions\\UI5Lab-browser\\"
+    "@ui5/cli": "^0.2.2",
+    "ui5lab-browser": "file:C:\\workspace\\progress_versions\\UI5Lab-browser\\ui5lab-browser-1.0.0.tgz"
   }
 }
