@@ -12,7 +12,8 @@ fs.readFile(sBrowserLibraryFile, 'utf8', function (err, data) {
 	if (err) {
 		return console.log(err);
 	}
-	var result = data.replace(/\[\r\n\t\]/m, '[\r\n\t\t"' + sNamespace + '"\r\n\t]');
+
+	var result = data.replace(/\[((\r)?\n\t)*\]/m, '[\r\n\t\t"' + sNamespace + '"\r\n\t]');
 
 	fs.writeFile(sBrowserLibraryFile, result, 'utf8', function (err) {
 		if (err) return console.log(err);
