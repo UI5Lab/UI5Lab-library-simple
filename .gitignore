@@ -1,5 +1,4 @@
-node_modules
-npm-debug.log
-.idea
-dist
-test/ui5lab/browser
+node_modules/
+dist/
+.idea/
+test/ui5lab/browser/
